@@ -1,5 +1,11 @@
 console.log("Javascript Carregado");
 
+/**
+ * Faz a validação do CPF
+ * @description
+ * 10/05/2022 vlima
+ */
+
 function validarCPF(cpf) {
   if (cpf.length !== 11) {
     return false;
@@ -33,6 +39,13 @@ function validarCPF(cpf) {
     return true;
   }
 }
+
+/**
+ * Mostra em Tela , se o CPF é valido ou Inválido
+ * @description
+ * 10/05/2022 vlima
+ */
+
 function validacao() {
   console.log("Iniciando Validação CPF");
   //Limpar Mensagem
