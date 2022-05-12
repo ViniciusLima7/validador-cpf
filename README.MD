@@ -26,7 +26,7 @@ Validador de CPF é um projeto  para realizar validações de CPF e origem do me
 
 # Acesse a pasta do projeto no seu terminal/cmd
 
-<code>$ cd feedback-generic-web</code>
+<code>$ cd validador-cpf</code>
 
 
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
