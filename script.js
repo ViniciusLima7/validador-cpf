@@ -51,6 +51,41 @@ function validarCPF(cpf) {
     return false;
   }
 
+  validaOrigemCPF(cpf);
+
+  return true;
+}
+
+/**
+ * Mostra em Tela , se o CPF é valido ou Inválido
+ * @description
+ * 10/05/2022 vlima
+ */
+
+function validacao() {
+  console.log("Iniciando Validação CPF");
+  //Limpar Mensagem
+  document.getElementById("success").style.display = "none";
+  document.getElementById("error").style.display = "none";
+
+  //Recebe Dados digitados pelo usuario
+  let cpf = document.getElementById("cpf_digitado").value;
+
+  let resultadovalidacao = validarCPF(cpf);
+  // Mostra Resultado em  Tela
+  if (resultadovalidacao) {
+    document.getElementById("success").style.display = "block";
+  } else {
+    document.getElementById("error").style.display = "block";
+  }
+}
+
+/**
+ * Mostra no console do navegador, a Origem do CPF
+ * @description
+ * 11/05/2022 vlima
+ */
+function validaOrigemCPF(cpf) {
   //Valida Origem do CPF
   switch (cpf.charAt(8)) {
     case "1":
@@ -87,30 +122,5 @@ function validarCPF(cpf) {
     case "0":
       console.log("CPF é do Rio Grande do Sul");
       break;
-  }
-  return true;
-}
-
-/**
- * Mostra em Tela , se o CPF é valido ou Inválido
- * @description
- * 10/05/2022 vlima
- */
-
-function validacao() {
-  console.log("Iniciando Validação CPF");
-  //Limpar Mensagem
-  document.getElementById("success").style.display = "none";
-  document.getElementById("error").style.display = "none";
-
-  //Recebe Dados digitados pelo usuario
-  let cpf = document.getElementById("cpf_digitado").value;
-
-  let resultadovalidacao = validarCPF(cpf);
-  // Mostra Resultado em  Tela
-  if (resultadovalidacao) {
-    document.getElementById("success").style.display = "block";
-  } else {
-    document.getElementById("error").style.display = "block";
   }
 }
