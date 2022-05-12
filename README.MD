@@ -22,7 +22,7 @@ Validador de CPF é um projeto  para realizar validações de CPF e origem do me
 
 # Clone este repositório
 
-<code>$ git clone https://github.com/ViniciusLima7/feedback-generic-web.git</code>
+<code>$ git clone https://github.com/ViniciusLima7/validador-cpf.git</code>
 
 # Acesse a pasta do projeto no seu terminal/cmd
 
