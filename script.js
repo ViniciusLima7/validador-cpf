@@ -1,5 +1,3 @@
-console.log("Javascript Carregado");
-
 /**
  * Faz a validação do CPF
  * @description
@@ -51,8 +49,6 @@ function validarCPF(cpf) {
     return false;
   }
 
-  validaOrigemCPF(cpf);
-
   return true;
 }
 
@@ -63,7 +59,6 @@ function validarCPF(cpf) {
  */
 
 function validacao() {
-  console.log("Iniciando Validação CPF");
   //Limpar Mensagem
   document.getElementById("success").style.display = "none";
   document.getElementById("error").style.display = "none";
@@ -75,6 +70,7 @@ function validacao() {
   // Mostra Resultado em  Tela
   if (resultadovalidacao) {
     document.getElementById("success").style.display = "block";
+    document.getElementById("origem").innerHTML = this.validaOrigemCPF(cpf);
   } else {
     document.getElementById("error").style.display = "block";
   }
@@ -89,38 +85,33 @@ function validaOrigemCPF(cpf) {
   //Valida Origem do CPF
   switch (cpf.charAt(8)) {
     case "1":
-      console.log(
-        "CPF é do Distrito Federal, Goiás, Mato Grosso do Sul ou Tocantins"
-      );
-      break;
+      return " Distrito Federal, Goiás, Mato Grosso do Sul ou Tocantins";
+
     case "2":
-      console.log("CPF é do Pará, Amazonas, Acre, Amapá, Rondônia ou Roraima");
-      break;
+      return " Pará, Amazonas, Acre, Amapá, Rondônia ou Roraima";
+
     case "3":
-      console.log("CPF é do Ceará, Maranhão ou Piau");
-      break;
+      return " Ceará, Maranhão ou Piau";
+
     case "4":
-      console.log(
-        "CPF é do Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas"
-      );
-      break;
+      return " Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas";
+
     case "5":
-      console.log("CPF é da Bahia ou Sergipe");
-      break;
+      return " Bahia ou Sergipe";
+
     case "6":
-      console.log("CPF é de Minas Gerais");
-      break;
+      return " Minas Gerais";
+
     case "7":
-      console.log("CPF é do Rio de Janeiro ou Espírito Santo");
-      break;
+      return " Rio de Janeiro ou Espírito Santo";
+
     case "8":
-      console.log("CPF é de São Paulo");
-      break;
+      return " São Paulo";
+
     case "9":
-      console.log("CPF é do Paraná ou Santa Catarina");
-      break;
+      return " Paraná ou Santa Catarina";
+
     case "0":
-      console.log("CPF é do Rio Grande do Sul");
-      break;
+      return " Rio Grande do Sul";
   }
 }
