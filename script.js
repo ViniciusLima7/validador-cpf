@@ -6,7 +6,7 @@
 
 function validarCPF(cpf) {
   //Remove mascara
-  // cpf = cpf.replace(/[^\d]+/g, "");
+  cpf = cpf.replace(/[^\d]+/g, "");
 
   if (
     cpf.length !== 11 ||
@@ -113,5 +113,16 @@ function validaOrigemCPF(cpf) {
 
     case "0":
       return " Rio Grande do Sul";
+  }
+}
+
+function mascaraCPF() {
+  let cpf = document.getElementById("cpf_digitado");
+
+  if (cpf.value.length == 3 || cpf.value.length == 7) {
+    cpf.value += ".";
+  }
+  if (cpf.value.length == 11) {
+    cpf.value += "-";
   }
 }
