@@ -82,8 +82,8 @@ function validacao() {
  * 11/05/2022 vlima
  */
 function validaOrigemCPF(cpf) {
-  //Valida Origem do CPF
-  switch (cpf.charAt(8)) {
+  //Valida Origem do CPF através do 8 digito do CPF
+  switch (cpf.charAt(10)) {
     case "1":
       return " Distrito Federal, Goiás, Mato Grosso do Sul ou Tocantins";
 
