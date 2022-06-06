@@ -77,7 +77,7 @@ function validacao() {
 }
 
 /**
- * Mostra no console do navegador, a Origem do CPF
+ * Validação da cidade de Origem do CPF, através do digito
  * @description
  * 11/05/2022 vlima
  */
@@ -116,6 +116,11 @@ function validaOrigemCPF(cpf) {
   }
 }
 
+/**
+ * Adiciona Mascara de CPF
+ * @description
+ * 06/05/2022 vlima
+ */
 function mascaraCPF() {
   let cpf = document.getElementById("cpf_digitado");
 
