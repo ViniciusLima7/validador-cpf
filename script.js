@@ -119,15 +119,38 @@ function validaOrigemCPF(cpf) {
 /**
  * Adiciona Mascara de CPF
  * @description
- * 06/05/2022 vlima
+ * 06/06/2022 vlima
  */
 function mascaraCPF() {
   let cpf = document.getElementById("cpf_digitado");
 
+  //Adiciona Ponto nos lugares corretos
   if (cpf.value.length == 3 || cpf.value.length == 7) {
     cpf.value += ".";
   }
+
+  //Adiciona Traço no lugar correto
   if (cpf.value.length == 11) {
     cpf.value += "-";
+  }
+
+  cursorInput();
+}
+
+/**
+ * Adiciona Tratamento na Posição do  Cursor
+ * @description
+ * 06/06/2022 vlima
+ */
+function cursorInput() {
+  let cpf = document.getElementById("cpf_digitado");
+  let cursor = cpf.selectionStart;
+  let tecla = window.event ? event.keyCode : event.which;
+
+  //Tratamento na Posição do Cursor
+  if (tecla != 37 && (cursor == 3 || cursor == 7 || cursor == 11)) {
+    cpf.setSelectionRange(cursor + 1, cursor + 1);
+  } else {
+    cpf.setSelectionRange(cursor, cursor);
   }
 }
