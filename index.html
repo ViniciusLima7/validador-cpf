@@ -18,22 +18,27 @@
 
     <link rel="stylesheet" href="./style.css">
     <script src="script.js" defer></script>
+    <script src="theme.js" defer></script>
 
 
 </head>
 
 <body>
     <div class="jumbotron">
+        
+            <button  class="theme"onclick="toogleTheme()">
+                <img src="./assets/themeOn.svg"  alt="Trocar Tema"width="60px" height="60px"/>
+            </button>
+        
         <div class="container">
             <h1 class="page-header">Validador de CPF</h1>
             <p>Através deste website você pode validar o CPF digitado, e em qual cidade o CPF foi feito. Validação possui cálculo não obsoleto</p>
         </div>
-
     </div>
     <div class="container formulario">
         <form>
             <div class="form-group">
-                <div class="input-group input-group-lg">
+                <div class="input-group input-group-lg ">
                     <span class="input-group-addon" id="sizing-addon1">CPF</span>
                     <input 
                     autocomplete="off"
@@ -59,6 +64,7 @@
             <strong>Ops!</strong> Seu CPF não é válido
         </div>
     </div>
+
 
 </body>
 

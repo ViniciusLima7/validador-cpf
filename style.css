@@ -1,3 +1,47 @@
 .formulario {
   margin-top: 5%;
 }
+
+.jumbotron{
+  background-color: #424242;
+  color:white;
+}
+
+.form-control{
+  background-color: black;
+  color:white;
+
+}
+
+.form-text{
+  color:white;
+}
+
+.form-control::placeholder{
+  color:white;
+}
+
+.theme{
+  display:flex;
+  justify-content: end;
+  background-color: transparent;
+  border:none;
+  margin-left: 15px;
+}
+
+
+/* Tema Dark */
+ .dark-mode {
+  background-color: black !important;
+  /* color: white; */
+
+  input-group input-group-lg{
+    background-color: black;
+  }
+
+}
+/* Tema Dark */
+
+
+
+
