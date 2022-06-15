@@ -2,23 +2,8 @@
   margin-top: 5%;
 }
 
-.jumbotron{
-  background-color: #424242;
-  color:white;
-}
-
-.form-control{
-  background-color: black;
-  color:white;
-
-}
-
-.form-text{
-  color:white;
-}
-
-.form-control::placeholder{
-  color:white;
+.page-header{
+  border: none;
 }
 
 .theme{
@@ -29,19 +14,46 @@
   margin-left: 15px;
 }
 
+/* Tema Dark */
+.dark-mode  {
+  background-color: rgb(24, 26, 27) ;
+  
+}
+
+.dark-mode  .jumbotron {
+ background-color: #222426!important ;
+ color:white;
+} 
+
+.dark-mode  .form-control{
+  background-color: black;
+  color:white;
+
+}
+
+.dark-mode  .form-control::placeholder{
+  color:#cccccc;
+}
+
+.dark-mode  .form-text{
+  color:white;
+}
 
 /* Tema Dark */
- .dark-mode {
-  background-color: black !important;
-  /* color: white; */
+
+
+
+
+
+
+
+
 
   input-group input-group-lg{
     background-color: black;
   }
 
-}
-/* Tema Dark */
 
 
 
-
+ 
