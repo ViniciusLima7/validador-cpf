@@ -41,6 +41,7 @@
                 <div class="input-group input-group-lg ">
                     <span class="input-group-addon" id="sizing-addon1">CPF</span>
                     <input 
+                    onkeypress="return event.charCode >= 48 && event.charCode <= 57"
                     autocomplete="off"
                     type="text" 
                     class="form-control" 
